@@ -25,7 +25,6 @@ struct APIService {
             if let error = error as? URLError {
                 completion(Result.failure(APIError.url(error)))
             } else if let response = response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
-                // TODO Error
                 
                 completion(Result.failure(APIError.badResponse(statusCode: response.statusCode)))
                 
@@ -41,7 +40,6 @@ struct APIService {
                     
                 } catch  {
                     
-                    // TODO show error to user
                     print (error)
                     
                     completion(Result.failure(APIError.parsing(error as? DecodingError)))
