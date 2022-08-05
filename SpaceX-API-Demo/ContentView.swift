@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+@StateObject var launchFetcher = LaunchFetcher()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        if launchFetcher.isLoading {
+            
+            ProgressView()
+            
+        } else if launchFetcher.errorMessage != nil {
+            
+            ErrorView(launchFetcher: launchFetcher)
+            
+        } else {
+            
+            LaunchListView(launches: launchFetcher.launches)
+            
+        }
+        
     }
 }
 
@@ -19,3 +35,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
