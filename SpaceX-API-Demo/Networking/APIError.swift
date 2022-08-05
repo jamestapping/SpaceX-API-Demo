@@ -46,6 +46,5 @@ enum APIError: Error, CustomStringConvertible {
         case .badResponse(statusCode: let statusCode):
             return "Bad Response with status code \(statusCode)"
         }
-        
     }
 }

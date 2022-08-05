@@ -16,24 +16,29 @@ struct LaunchDetailView: View {
         
         VStack (alignment: .leading){
             
-            AsyncImage(url: URL(string: launch.links?.patch.small ?? "")) { phase in
-                if let image = phase.image {
+            if launch.links?.patch.small != nil  {
+                
+                AsyncImage(url: URL(string: launch.links?.patch.small ?? "")) { phase in
+                    if let image = phase.image {
+                            
+                            image.resizable()
+                                .scaledToFill()
+                                .frame(width: imageSize, height: imageSize)
+                                .clipped()
+                                .padding()
                         
-                        image.resizable()
-                            .scaledToFill()
+                       } else if phase.error != nil {
+                           Color.red
                             .frame(width: imageSize, height: imageSize)
-                            .clipped()
-                            .padding()
+                       } else {
+                           ProgressView()
+                               .frame(width: imageSize, height: imageSize)
+                       }
                     
-                   } else if phase.error != nil {
-                       Color.red
-                        .frame(width: imageSize, height: imageSize)
-                   } else {
-                       ProgressView()
-                           .frame(width: imageSize, height: imageSize)
-                   }
+                }
                 
             }
+            
             
             Text("Details : ")
                 .bold()
