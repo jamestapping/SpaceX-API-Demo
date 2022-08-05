@@ -14,11 +14,7 @@ struct LaunchDetailView: View {
     
     var body: some View {
         
-        VStack (alignment: .leading, spacing: 10){
-            
-            Text("Details : ").bold()
-            
-            Text (launch.details ?? "Pas details")
+        VStack (alignment: .leading){
             
             AsyncImage(url: URL(string: launch.links?.patch.small ?? "")) { phase in
                 if let image = phase.image {
@@ -27,6 +23,7 @@ struct LaunchDetailView: View {
                             .scaledToFill()
                             .frame(width: imageSize, height: imageSize)
                             .clipped()
+                            .padding()
                 
                     
                    } else if phase.error != nil {
@@ -38,11 +35,17 @@ struct LaunchDetailView: View {
                    }
                 
             }
-        
             
-        }
+            Text("Details : ")
+                .bold()
+
+            Text (launch.details ?? "Pas details disponible")
+                .padding()
         
-        Spacer()
+            Spacer()    
+        }
+        .navigationTitle(launch.name ?? "")
+        // Spacer()
         
     }
 }

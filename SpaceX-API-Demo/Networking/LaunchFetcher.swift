@@ -49,8 +49,6 @@ class LaunchFetcher: ObservableObject {
                 
             case .success(let launches):
                 
-                print (launches)
-                
                 DispatchQueue.main.async {
                     self.launches = launches
                 }

@@ -37,8 +37,6 @@ struct APIService {
                     
                     let dataResponse = try decoder.decode([Launch].self, from: data)
                     
-                    print (dataResponse)
-                    
                     completion(Result.success(dataResponse))
                     
                 } catch  {
