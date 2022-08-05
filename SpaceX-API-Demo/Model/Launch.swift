@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - WelcomeElement
+// MARK: - Launch
 
 struct Launch: Codable, Identifiable {
     

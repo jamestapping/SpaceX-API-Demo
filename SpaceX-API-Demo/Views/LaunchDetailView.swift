@@ -24,7 +24,6 @@ struct LaunchDetailView: View {
                             .frame(width: imageSize, height: imageSize)
                             .clipped()
                             .padding()
-                
                     
                    } else if phase.error != nil {
                        Color.red
