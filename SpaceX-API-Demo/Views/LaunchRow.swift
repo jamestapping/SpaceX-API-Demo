@@ -20,7 +20,7 @@ struct LaunchRow: View {
             Text(launch.name ?? "")
                 .font(.headline)
             Text(formatStringDate(date: launch.dateUTC!))
-            Text("Lancement : \(launch.success ?? false ? "Succès":"Echèc")")
+            Text("Lancement : \(launch.success ?? false ? "😅 Succès":"🫤 Echèc")")
             
         }
     }
