@@ -37,6 +37,12 @@ struct LaunchDetailView: View {
                     
                 }
                 
+            } else {
+                
+                Image(systemName: "photo")
+                    .resizable()
+                    .frame(width: imageSize, height: imageSize)
+                
             }
             
             
