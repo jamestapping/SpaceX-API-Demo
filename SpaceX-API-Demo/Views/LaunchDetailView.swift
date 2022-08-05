@@ -44,7 +44,6 @@ struct LaunchDetailView: View {
             Spacer()    
         }
         .navigationTitle(launch.name ?? "")
-        // Spacer()
         
     }
 }
