@@ -45,7 +45,6 @@ class LaunchFetcher: ObservableObject {
                     self.errorMessage = error.localizedDescription
                 }
                 
-                
             case .success(let launches):
                 
                 DispatchQueue.main.async {
