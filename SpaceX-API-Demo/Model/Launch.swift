@@ -31,6 +31,14 @@ struct Launch: Codable, Identifiable {
          case id
      }
     
+    var formattedDate: String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let newDate = dateFormatter.date(from: dateUTC ?? "No Date")
+        dateFormatter.setLocalizedDateFormatFromTemplate("MMMM d, yyyy")
+        return dateFormatter.string(from: newDate!)
+    }
 }
 
 // MARK: - Links

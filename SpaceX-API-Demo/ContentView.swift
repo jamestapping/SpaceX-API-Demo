@@ -24,9 +24,7 @@ struct ContentView: View {
         } else {
             
             LaunchListView(launches: launchFetcher.launches)
-            
         }
-        
     }
 }
 

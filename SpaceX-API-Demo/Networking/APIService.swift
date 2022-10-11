@@ -18,7 +18,6 @@ struct APIService {
             completion(Result.failure(error))
             
             return
-            
         }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -44,14 +43,9 @@ struct APIService {
                     print (error)
                     
                     completion(Result.failure(APIError.parsing(error as? DecodingError)))
-                    
                 }
-                
             }
-        
         }
-        
         task.resume()
     }
-    
 }

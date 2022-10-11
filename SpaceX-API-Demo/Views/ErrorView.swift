@@ -20,7 +20,6 @@ struct ErrorView: View {
             Text(launchFetcher.errorMessage ?? "")
             
         }
-        
     }
 }
 

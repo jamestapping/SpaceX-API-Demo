@@ -27,13 +27,11 @@ struct LaunchListView: View {
                         LaunchRow(launch: launch)
                         
                     }
-                    
                 }
             }
             .listStyle(PlainListStyle())
             .navigationTitle("Space X Launches")
         }
-        
     }
 }
 
