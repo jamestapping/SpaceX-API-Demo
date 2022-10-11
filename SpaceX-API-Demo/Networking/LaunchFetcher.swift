@@ -14,7 +14,6 @@ class LaunchFetcher: ObservableObject {
     @Published var errorMessage: String? = nil
     @Published var isLoading: Bool = false
     
-    
     init (){
         
         fetchAllLaunches()

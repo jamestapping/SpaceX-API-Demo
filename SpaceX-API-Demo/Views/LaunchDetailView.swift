@@ -45,7 +45,6 @@ struct LaunchDetailView: View {
                 
             }
             
-            
             Text("Details : ")
                 .bold()
 
