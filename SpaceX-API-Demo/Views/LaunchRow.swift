@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LaunchRow: View {
     
+    @StateObject var launchFetcher = LaunchFetcher()
+    
     let launch: Launch
     
     var body: some View {
@@ -20,8 +22,18 @@ struct LaunchRow: View {
             Text(launch.formattedDate)
             Text("Lancement : \(launch.success ?? false ? "😅 Succès":"🫤 Echèc")")
         }
-    }
-
+    } 
 }
+
+//struct LaunchRow_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//
+//
+//        LaunchRow(launch: LaunchFetcher.success)
+//
+//    }
+//
+//}
 
 

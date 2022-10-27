@@ -35,3 +35,12 @@ struct LaunchListView: View {
     }
 }
 
+struct LaunchListView_previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        LaunchListView(launches: LaunchFetcher.successState().launches)
+        
+    }
+    
+}

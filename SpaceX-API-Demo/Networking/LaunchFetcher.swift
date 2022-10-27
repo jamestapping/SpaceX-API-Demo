@@ -12,8 +12,8 @@ class LaunchFetcher: ObservableObject {
     
     @Published var launches = [Launch]()
     @Published var errorMessage: String? = nil
-    @Published var isLoading: Bool = false
-    
+    @Published var isLoading = false
+
     init (){
         
         fetchAllLaunches()
@@ -50,8 +50,34 @@ class LaunchFetcher: ObservableObject {
                 DispatchQueue.main.async {
                     self.launches = launches
                 }
+                
+                //print (launches)
+                
             }
         }
     }
+    
+    // MARK: Preview helpers
+
+    static func errorState() -> LaunchFetcher {
+        
+        let fetcher = LaunchFetcher()
+        
+        fetcher.errorMessage = APIError.url(URLError.init(.notConnectedToInternet)).localizedDescription
+        
+        return fetcher
+    }
+
+    static func successState() -> LaunchFetcher {
+        
+        let fetcher = LaunchFetcher()
+        fetcher.launches = [Launch.example1()]
+        
+        return fetcher
+        
+    }
+    
 }
+
+
 

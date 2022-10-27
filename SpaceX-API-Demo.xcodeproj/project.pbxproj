@@ -19,6 +19,7 @@
 		1AB7179E289D05CE00833B66 /* LaunchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7179D289D05CE00833B66 /* LaunchRow.swift */; };
 		1AB717A0289D075F00833B66 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7179F289D075F00833B66 /* ErrorView.swift */; };
 		1AB717A2289D15C000833B66 /* LaunchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB717A1289D15C000833B66 /* LaunchDetailView.swift */; };
+		7D6D2C16290953B100A5F2AB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D2C15290953B100A5F2AB /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		1AB7179D289D05CE00833B66 /* LaunchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRow.swift; sourceTree = "<group>"; };
 		1AB7179F289D075F00833B66 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		1AB717A1289D15C000833B66 /* LaunchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailView.swift; sourceTree = "<group>"; };
+		7D6D2C15290953B100A5F2AB /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		1AB71798289D049100833B66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7D6D2C15290953B100A5F2AB /* LoadingView.swift */,
 				1AB71799289D04C300833B66 /* LaunchListView.swift */,
 				1AB7179D289D05CE00833B66 /* LaunchRow.swift */,
 				1AB717A1289D15C000833B66 /* LaunchDetailView.swift */,
@@ -188,6 +191,7 @@
 				1AB71790289CFBEB00833B66 /* Launch.swift in Sources */,
 				1AB71783289CF81A00833B66 /* ContentView.swift in Sources */,
 				1AB71793289CFD6900833B66 /* APIService.swift in Sources */,
+				7D6D2C16290953B100A5F2AB /* LoadingView.swift in Sources */,
 				1AB71795289CFD8D00833B66 /* LaunchFetcher.swift in Sources */,
 				1AB717A2289D15C000833B66 /* LaunchDetailView.swift in Sources */,
 				1AB71781289CF81A00833B66 /* SpaceX_API_DemoApp.swift in Sources */,
